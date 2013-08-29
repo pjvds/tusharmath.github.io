@@ -1,6 +1,10 @@
 box: wercker/nodejs
 build:
   steps:
+    - script:
+        name: Echo GIT repository
+        code: |-
+          echo $WERCKER_GIT_REPOSITORY
     - npm-install
     - script:
         name: wintersmith build
